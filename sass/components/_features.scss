@@ -1,5 +1,14 @@
 .features {
   padding-top: 94px;
+  margin-bottom: 94px;
+  &__title {
+    color: var(--title-text-color);
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 0px;
+    display: none;
+  }
   &__item h2 {
     width: 270px;
     font-family: Roboto, sans-serif;
@@ -74,13 +83,7 @@
     padding: 0;
     margin-bottom: 0;
     display: flex;
-    .title {
-      color: var(--title-text-color);
-      font-family: Roboto, sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      margin-top: 0px;
-    }
+
     .list {
       color: #757575;
       font-family: Roboto, sans-serif;
