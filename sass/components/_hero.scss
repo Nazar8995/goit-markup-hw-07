@@ -7,18 +7,17 @@
   background-size: cover;
   background-position: center;
   height: 600px;
-}
-
-.hero__title {
-  color: #fff;
-  font-family: Roboto, sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 44px;
-  line-height: 60px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-right: auto;
-  margin-left: auto;
-  width: 650px;
+  &__title {
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: auto;
+    margin-left: auto;
+    width: 650px;
+  }
 }

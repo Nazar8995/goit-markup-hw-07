@@ -35,16 +35,6 @@ textarea {
     color: #212121;
     margin: 40px 40px 12px;
   }
-  &__subtitle {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: #757575;
-    padding-bottom: 4px;
-  }
 }
 .form {
   width: 528px;
@@ -74,7 +64,7 @@ textarea {
       border: 1px solid rgba(33, 33, 33, 0.2);
       &:focus {
         outline: 1px solid #2196f3;
-        ~ .position__relative {
+        ~ .form__icon {
           outline: 0px solid #2196f3;
           fill: #2196f3;
         }
@@ -107,7 +97,7 @@ textarea {
     }
   }
 }
-.position__relative {
+.form__icon {
   position: absolute;
   display: inline-block;
   width: 18px;
@@ -131,7 +121,7 @@ textarea {
     color: #757575;
     margin-left: 73px;
   }
-  &__span {
+  &__policy--span {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -142,11 +132,11 @@ textarea {
     color: #2196f3;
   }
 }
-.checkbox {
+.terms__policy-checkbox {
   position: absolute;
   left: 30px;
   appearance: none;
-  &:checked + .policy__check {
+  &:checked + .terms__policy-check {
     fill: #fff;
     background: #2196f3;
     border-radius: 2px;
@@ -155,7 +145,7 @@ textarea {
     cursor: pointer;
   }
 }
-.policy__check {
+.terms__policy-check {
   width: 16px;
   height: 15px;
   margin-right: 7px;
@@ -193,7 +183,7 @@ textarea {
     transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-.button__modal-close {
+.modal__button-close {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -208,9 +198,9 @@ textarea {
   background-color: #fff;
   border: solid 1px;
   border-color: rgba(0, 0, 0, 0.1);
-}
-.button__modal-close:hover,
-.close__modal-svg:hover {
-  fill: #188ce8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: #188ce8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
