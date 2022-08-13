@@ -10,6 +10,7 @@
     display: none;
   }
   &__item h2 {
+    color: #212121;
     width: 270px;
     font-family: Roboto, sans-serif;
     font-weight: 700;
@@ -21,54 +22,10 @@
   &__item:not(:first-child) {
     margin-left: 30px;
   }
-  &__title1::before {
-    content: '';
-    display: inline-block;
-    width: 270px;
-    height: 120px;
-    background-color: #f5f4fa;
-    background-image: url(../images/Group.svg);
+  &__item-icon {
     margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
   }
-  &__title2::before {
-    content: '';
-    display: inline-block;
-    width: 270px;
-    height: 120px;
-    background-color: #f5f4fa;
-    background-image: url(../images/clock\ 1.svg);
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-  }
-  &__title3::before {
-    content: '';
-    display: inline-block;
-    width: 270px;
-    height: 120px;
-    background-color: #f5f4fa;
-    background-image: url(../images/diagram\ 1.svg);
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-  }
-  &__title4::before {
-    content: '';
-    display: inline-block;
-    width: 270px;
-    height: 120px;
-    background-color: #f5f4fa;
-    background-image: url(../images/astronaut\ 1.svg);
-    margin-bottom: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-  }
+
   &__description {
     font-family: Roboto;
     font-style: 400;
@@ -79,16 +36,13 @@
     letter-spacing: 3%;
     padding-top: 10px;
   }
-  &-list {
+  &__list {
     padding: 0;
     margin-bottom: 0;
     display: flex;
-
-    .list {
-      color: #757575;
-      font-family: Roboto, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
+    color: #757575;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 }
