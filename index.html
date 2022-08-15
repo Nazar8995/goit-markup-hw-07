@@ -14,45 +14,47 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body class="">
-    <header class="header">
-      <div class="container header-group">
-        <a href="./index.html" class="header-link"
-          >Web<span class="header-link--span">Studio</span></a
-        >
+    <div class="container">
+      <header class="header">
+        <div class="header__container">
+          <a href="./index.html" class="header__link"
+            >Web<span class="header__link--span">Studio</span></a
+          >
 
-        <nav class="main__nav">
-          <ul class="main__nav-list">
-            <li class="main__nav-item">
-              <a href="./index.html" class="main__nav-link-is-active">Студия</a>
-            </li>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="./index.html" class="header__nav-link-is-active">Студия</a>
+              </li>
 
-            <li class="main__nav-item">
-              <a href="./portfolio.html" class="main__nav-link">Портфолио </a>
+              <li class="header__nav-item">
+                <a href="./portfolio.html" class="header__nav-link">Портфолио </a>
+              </li>
+              <li class="header__nav-item"><a href="" class="header__nav-link">Контакты </a></li>
+            </ul>
+          </nav>
+
+          <ul class="header__contact">
+            <li class="header__contact-item">
+              <a href="mailto:info@devstudio.com" class="header__contact-mail">
+                <svg class="header__contact-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
             </li>
-            <li class="main__nav-item"><a href="" class="main__nav-link">Контакты </a></li>
+            <li class="header__contact-item">
+              <a href="tel:+380961111111" class="header__contact-tel">
+                <svg class="header__contact-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-Vector"></use>
+                </svg>
+
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
-
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link-mail">
-              <svg class="contact__icon-mail" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link-tel">
-              <svg class="contact__icon-tel" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-Vector"></use>
-              </svg>
-
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
+        </div>
+      </header>
+    </div>
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -393,14 +395,16 @@
             >Web<span class="footer__name--span">Studio</span></a
           >
 
-          <address class="address__foot">
-            <p class="adress">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-list">
-              <li class="footer__item">
-                <a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a>
+          <address class="footer__address">
+            <p class="footer__address">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="footer__address-list">
+              <li class="footer__address-item">
+                <a href="mailto:info@devstudio.com" class="footer__address-link"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="footer__item">
-                <a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="footer__address-link">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
