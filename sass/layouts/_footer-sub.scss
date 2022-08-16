@@ -1,4 +1,4 @@
-.sub__mailing {
+.footer__mailing {
   margin-top: 35px;
   margin-left: 92px;
   display: flex;
@@ -28,9 +28,9 @@
     }
   }
 }
-.sub__form {
+.footer__mailing-button {
   display: flex;
-  &-button-submit {
+  &-submit {
     color: #fff;
     background-color: #2196f3;
     font-family: Roboto, sans-serif;
