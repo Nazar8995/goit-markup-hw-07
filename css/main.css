@@ -245,7 +245,7 @@ textarea {
   resize: none;
 }
 
-.modal {
+.modal__form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -255,7 +255,7 @@ textarea {
   background-color: #fff;
   border-radius: 4px;
 }
-.modal__title {
+.modal__form-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 20px;
@@ -263,12 +263,31 @@ textarea {
   color: #212121;
   margin: 40px 40px 12px;
 }
-
-.form {
+.modal__form-close {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px 8px;
+  background-color: #fff;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.modal__form-close:hover {
+  fill: #188ce8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__form .form {
   width: 528px;
   height: 581px;
 }
-.form__field {
+.modal__form .form__field {
   display: flex;
   flex-direction: column;
   font-family: Roboto, sans-serif;
@@ -282,10 +301,10 @@ textarea {
   position: relative;
   text-align: left;
 }
-.form__field:not(:last-child) {
+.modal__form .form__field:not(:last-child) {
   margin-bottom: 10px;
 }
-.form__field input {
+.modal__form .form__field input {
   width: 448px;
   height: 40px;
   border-radius: 4px;
@@ -293,17 +312,17 @@ textarea {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
-.form__field input:focus {
+.modal__form .form__field input:focus {
   outline: 1px solid #2196f3;
 }
-.form__field input:focus ~ .form__icon {
+.modal__form .form__field input:focus ~ .form__icon {
   outline: 0px solid #2196f3;
   fill: #2196f3;
 }
-.form__field label {
+.modal__form .form__field label {
   margin-bottom: 4px;
 }
-.form__field textarea {
+.modal__form .form__field textarea {
   font-family: Roboto, sans-serif;
   width: 448px;
   height: 120px;
@@ -313,10 +332,10 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: 0px;
 }
-.form__field textarea:focus {
+.modal__form .form__field textarea:focus {
   outline: 1px solid #2196f3;
 }
-.form__field textarea::-moz-placeholder {
+.modal__form .form__field textarea::-moz-placeholder {
   font-family: Roboto, sans-serif;
   color: #757575;
   font-style: normal;
@@ -325,7 +344,7 @@ textarea {
   line-height: 14px;
   text-align: left;
 }
-.form__field textarea:-ms-input-placeholder {
+.modal__form .form__field textarea:-ms-input-placeholder {
   font-family: Roboto, sans-serif;
   color: #757575;
   font-style: normal;
@@ -334,7 +353,7 @@ textarea {
   line-height: 14px;
   text-align: left;
 }
-.form__field textarea::placeholder {
+.modal__form .form__field textarea::placeholder {
   font-family: Roboto, sans-serif;
   color: #757575;
   font-style: normal;
@@ -343,8 +362,7 @@ textarea {
   line-height: 14px;
   text-align: left;
 }
-
-.form__icon {
+.modal__form .form__icon {
   position: absolute;
   display: inline-block;
   width: 18px;
@@ -352,12 +370,11 @@ textarea {
   top: 53%;
   left: 49px;
 }
-
-.terms {
+.modal__form .terms {
   padding-top: 10px;
   padding-bottom: 30px;
 }
-.terms__policy {
+.modal__form .terms__policy {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -370,7 +387,7 @@ textarea {
   color: #757575;
   margin-left: 73px;
 }
-.terms__policy--span {
+.modal__form .terms__policy--span {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -381,15 +398,14 @@ textarea {
   cursor: pointer;
   color: #2196f3;
 }
-
-.terms__policy-checkbox {
+.modal__form .terms__policy-checkbox {
   position: absolute;
   left: 30px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.terms__policy-checkbox:checked + .terms__policy-check {
+.modal__form .terms__policy-checkbox:checked + .terms__policy-check {
   fill: #fff;
   background: #2196f3;
   border-radius: 2px;
@@ -397,8 +413,7 @@ textarea {
   display: inline-block;
   cursor: pointer;
 }
-
-.terms__policy-check {
+.modal__form .terms__policy-check {
   width: 16px;
   height: 15px;
   margin-right: 7px;
@@ -414,8 +429,7 @@ textarea {
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.button__submit {
+.modal__form .button__submit {
   color: #fff;
   background-color: #2196f3;
   font-family: Roboto, sans-serif;
@@ -433,30 +447,9 @@ textarea {
   margin-top: 30px;
   padding: 10px 55px;
 }
-.button__submit:hover {
+.modal__form .button__submit:hover {
   background-color: #188ce8;
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__button-close {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 8px 8px;
-  background-color: #fff;
-  border: solid 1px;
-  border-color: rgba(0, 0, 0, 0.1);
-}
-.modal__button-close:hover {
-  fill: #188ce8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .features {
@@ -704,13 +697,13 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__wrapper {
+.footer__social {
   margin-left: 70px;
 }
-.social__wrapper-icon {
+.footer__social-icon {
   fill: #fff;
 }
-.social__wrapper-item {
+.footer__social-item {
   background: rgba(255, 255, 255, 0.1);
   width: 44px;
   height: 44px;
@@ -720,14 +713,14 @@ textarea {
   align-items: center;
   cursor: pointer;
 }
-.social__wrapper-item:not(:last-child) {
+.footer__social-item:not(:last-child) {
   margin-right: 10px;
 }
-.social__wrapper-item:hover {
+.footer__social-item:hover {
   background: #2196f3;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social__wrapper-title {
+.footer__social-title {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -739,7 +732,7 @@ textarea {
   justify-content: center;
   color: #fff;
 }
-.social__wrapper-list {
+.footer__social-list {
   display: flex;
   margin-top: 20px;
 }
